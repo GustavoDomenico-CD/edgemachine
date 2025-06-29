@@ -1,0 +1,307 @@
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS PARA PÁGINA DE CHECKOUT
+   ========================================================================== */
+
+/* Header Específico do Checkout */
+.checkout-header {
+  background-color: var(--bg-secondary);
+  padding: 30px 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.checkout-header .logo img {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.checkout-header h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-top: 10px;
+}
+
+/* Passos do Checkout */
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  position: relative;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkout-steps::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--bg-tertiary);
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border: 3px solid var(--bg-tertiary);
+  transition: var(--transition);
+}
+
+.step-title {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.step.completed .step-number,
+.step.active .step-number {
+  background-color: var(--accent);
+  color: var(--black);
+  border-color: var(--accent);
+}
+
+.step.completed::after,
+.step.active::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent);
+  z-index: 1;
+}
+
+.step.active::after {
+  width: 50%;
+  left: 50%;
+}
+
+.step:last-child::after {
+  display: none;
+}
+
+.step.completed .step-title,
+.step.active .step-title {
+  color: var(--accent);
+}
+
+/* Conteúdo Principal do Checkout */
+.checkout-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.ebook-info {
+  background-color: var(--bg-secondary);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.ebook-info img {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 25px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ebook-title {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ebook-description {
+  color: var(--text-primary);
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.ebook-features {
+  margin-top: 30px;
+}
+
+.ebook-features p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.ebook-features i {
+  color: var(--accent);
+}
+
+.payment-info {
+  background-color: var(--bg-secondary);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.payment-title {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.payment-steps {
+  margin-bottom: 30px;
+}
+
+.payment-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 35px;
+}
+
+.payment-step::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background-color: var(--accent);
+  color: var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.btn-checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--accent);
+  color: var(--black);
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.btn-checkout:hover {
+  background-color: var(--accent-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.support-info {
+  background-color: var(--bg-tertiary);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-top: 30px;
+}
+
+.support-title {
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  margin: 15px 0;
+  transition: var(--transition);
+}
+
+.whatsapp-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .ebook-info img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-header h1 {
+    font-size: 2rem;
+  }
+  
+  .step-title {
+    font-size: 0.8rem;
+  }
+  
+  .payment-step {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .checkout-steps {
+    margin-bottom: 30px;
+  }
+  
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .step-title {
+    font-size: 0.7rem;
+  }
+  
+  .checkout-header .logo img {
+    height: 60px;
+  }
+  
+  .ebook-info, .payment-info {
+    padding: 20px;
+  }
+}

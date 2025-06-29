@@ -1,0 +1,377 @@
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS PARA PÁGINA DO CAPÍTULO 4 - ANÁLISE TÉCNICA
+   ========================================================================== */
+
+/* Hero do capítulo */
+.chapter-hero {
+  padding: calc(var(--header-height) + 50px) 0 80px;
+  text-align: center;
+  background-color: var(--bg-tertiary);
+}
+
+.chapter-hero h1 {
+  max-width: 900px;
+  margin: 0 auto 15px;
+}
+
+.chapter-hero .section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+}
+
+/* Navegação entre capítulos */
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+/* Conteúdo do capítulo */
+.chapter-content {
+  padding: 60px 0;
+}
+
+.chapter-text {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.chapter-text h2 {
+  text-align: left;
+  margin: 40px 0 20px;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.chapter-text h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  margin: 15px 0 25px;
+}
+
+.chapter-text h3 {
+  margin: 30px 0 15px;
+  font-size: 1.6rem;
+  color: var(--accent-light);
+}
+
+.chapter-text p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Container de imagem com centralização */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  width: 100%;
+}
+
+/* Imagens responsivas e centralizadas */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Legenda centralizada */
+.image-caption {
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+/* Estilo para grupos de imagens */
+.image-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+/* Boxes de informação */
+.info-box {
+  background-color: var(--bg-secondary);
+  border-left: 4px solid var(--accent);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin: 25px 0;
+  box-shadow: var(--box-shadow);
+}
+
+.info-box h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.info-box h5 {
+  margin: 15px 0 10px;
+  font-size: 1.1rem;
+  color: var(--accent-light);
+}
+
+.info-box ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.info-box li {
+  margin-bottom: 8px;
+}
+
+.info-box .example {
+  background-color: rgba(var(--accent-rgb), 0.1);
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  margin: 15px 0;
+  border-left: 3px solid var(--accent);
+}
+
+/* Cards de plataforma e tendências */
+.platform-card {
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  margin: 30px 0;
+  box-shadow: var(--box-shadow);
+  border-top: 3px solid var(--accent);
+}
+
+.platform-card h3 {
+  color: var(--accent-light);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.platform-card h4 {
+  margin: 20px 0 10px;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.platform-card ul {
+  padding-left: 20px;
+}
+
+.platform-card li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/* Imagens dentro de cards */
+.platform-card .responsive-image {
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+/* Seção de prós e contras (padrões gráficos) */
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.pros, .cons {
+  background-color: var(--bg-tertiary);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.pros {
+  border-left: 4px solid #2ecc71;
+}
+
+.cons {
+  border-left: 4px solid #e74c3c;
+}
+
+.pros h5, .cons h5 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.pros ul, .cons ul {
+  padding-left: 20px;
+}
+
+.pros li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.pros li::before {
+  content: "✓";
+  color: #2ecc71;
+  position: absolute;
+  left: -20px;
+  font-weight: bold;
+}
+
+.cons li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.cons li::before {
+  content: "✗";
+  color: #e74c3c;
+  position: absolute;
+  left: -20px;
+  font-weight: bold;
+}
+
+/* Listas estilizadas */
+.feature-list {
+  background-color: var(--bg-secondary);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin: 25px 0;
+  border-left: 4px solid var(--accent);
+}
+
+.feature-list h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.feature-list li, .checklist-box li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.feature-list i, .checklist-box i {
+  color: var(--accent);
+  margin-top: 3px;
+}
+
+.checklist-box {
+  background-color: var(--bg-tertiary);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin: 25px 0;
+  border: 1px dashed var(--accent);
+}
+
+.checklist-box h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.checklist-box ul {
+  padding-left: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .chapter-text {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chapter-hero {
+    padding: calc(var(--header-height) + 30px) 0 60px;
+  }
+  
+  .chapter-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .chapter-text h3 {
+    font-size: 1.4rem;
+  }
+  
+  .info-box h4,
+  .checklist-box h4,
+  .feature-list h4 {
+    font-size: 1.2rem;
+  }
+  
+  .platform-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .pros-cons {
+    grid-template-columns: 1fr;
+  }
+  
+  .responsive-image {
+    max-width: 95%;
+  }
+  
+  .platform-card .responsive-image {
+    max-width: 100%;
+  }
+  
+  .image-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .chapter-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .chapter-hero .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .chapter-navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .chapter-navigation .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .chapter-text h2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .platform-card h3 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
